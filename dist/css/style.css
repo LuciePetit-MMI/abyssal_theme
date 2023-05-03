@@ -1,0 +1,370 @@
+/*-- SUMMARY
+
+    1- Variables
+    2- General styles
+    3- Text styles
+    4- Header-navigation
+    5- Showcase
+    6- Project
+    7- OFF Festival
+    8- NFTs
+    9- Footer
+    10- Modifier
+    11- Responsive
+        1- General styles
+        2- Text styles
+        3- Header-navigation
+        4- Showcase
+        5- Project
+        6- OFF Festival
+        7- NFTs
+
+--*/
+
+
+/*---- 1- Variables ----*/
+:root {
+    --dark-blue: #010D26;
+    --mid-blue: #418FBF;
+    --light-blue: #4EB1D9;
+    --tonic-blue: #6CE4FF;
+
+    --text-blue: #164059;
+    --text-white: #fefefe;
+
+    --text-font: 'Inria Sans', sans-serif;
+    --title-font: Lemonada, sans-serif;
+
+    --size-h1: 3.5rem;
+    --size-h1_sub: 2rem;
+    --size-h2: 3rem;
+    --size-h3: 2rem;
+    --size-p: 1.5rem;
+
+    --size-h1-xl: 12rem;
+    --size-h1-xl_sub: 2rem;
+    --size-h2-xl: 4rem;
+    --size-h3-xl: 2rem;
+    --size-p-xl: 1.5rem;
+}
+
+/*---- 2- General styes ----*/
+
+*{
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+body{
+    margin: 0 auto;
+    font-family: var(--text-font);
+    color: var(--text-blue);
+    background-color: var(--mid-blue);
+    position: relative;
+    overflow-x: hidden;
+}
+
+.rect1{
+    position: absolute;
+    width: 100vw;
+    height: 130vh;
+    left: 0px;
+    top: 0px;
+    z-index: -9999;
+    background: var(--light-blue);
+}
+
+.rect2{
+    position: absolute;
+    width: 100%;
+    height: 200vh;
+    left: 0px;
+    top: 130vh;
+    z-index: -9999;
+    background: var(--dark-blue);
+}
+
+.rect3{
+    position: absolute;
+    width: 100%;
+    height: 60vh;
+    left: 0px;
+    top: 330vh;
+    z-index: -999;
+    background: var(--tonic-blue);
+}
+
+/*---- 3- Text styles ----*/
+.h1{
+    font-family: var(--title-font);
+    font-size: var(--size-h1);
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 4rem;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.h1_sub{
+    font-family: var(--text-font);
+    font-size: var(--size-h1_sub);
+    text-align: center;
+    max-width: 70%;
+    margin: auto;
+}
+
+.h2{
+    font-family: var(--title-font);
+    font-size: var(--size-h2);
+    font-weight: bold;
+}
+
+.h3{
+    font-family: var(--text-font);
+    font-size: var(--size-h3);
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.nfts_h3{
+    font-family: var(--title-font);
+    font-size: var(--size-h3);
+    font-weight: bold;
+}
+
+
+p, .menu-item{
+    font-family: var(--text-font);
+    font-size: var(--size-p);
+}
+
+a{
+    color: var(--text-blue);
+    text-decoration: none;
+}
+
+/*---- 4- Header-navigation ----*/
+.header{
+    height: 10vh;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-list{
+    display: flex;
+    flex-flow: row wrap;
+    list-style: none;
+    padding: 0;
+}
+
+.header-logo{
+    width: 3rem;
+    cursor: pointer;
+}
+
+.menu-item{
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+/*---- 5- Showcase ----*/
+.showcase{
+    padding-top: 20vh;
+    width: 80vw;
+    margin: 0 auto;
+    padding-bottom: 5rem;
+}
+
+/*---- 6- Projects ----*/
+.project{
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 2rem;
+}
+
+/*---- 7- OFF Festival ----*/
+.off{
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 5rem;
+}
+
+/*---- 8- NFTs ----*/
+.nfts{
+    margin-top: 5rem;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-gap: 2rem;
+}
+
+.nfts_item{
+    position: relative;
+}
+
+.nfts_h3{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    width: max-content;
+}
+
+/*---- 9- Footer ----*/
+footer p{
+    width: 90%;
+    margin: 2rem auto;
+    font-style: italic;
+    text-align: center; 
+}
+
+/*---- 10- Modifier ----*/
+.--uppercase{
+    text-transform: uppercase;
+}
+
+.--underline{
+    text-decoration: underline;
+}
+
+.--spacing-y-4{
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.--white{
+    color: var(--text-white);
+}
+
+/*---- 11- Responsive ----*/ 
+@media screen and (min-width: 1200px) {
+    /*---- 1- General styes ----*/
+    body{
+        width: 100%;
+    }
+
+    .rect1{
+        position: absolute;
+        width: 100%;
+        height: 110vh;
+        left: 0px;
+        top: 0px;
+        z-index: -9999;
+        background: var(--light-blue);
+    }
+    
+    .rect2{
+        position: absolute;
+        width: 100%;
+        height: 170vh;
+        left: 0px;
+        top: 110vh;
+        z-index: -9999;
+        background: var(--dark-blue);
+    }
+    
+    .rect3{
+        position: absolute;
+        width: 597px;
+        height:1500px;
+        left: 900px;
+        top: 140vh;
+        z-index: -999;
+        background: var(--tonic-blue);
+    }
+
+    /*---- 2- Text styes ----*/
+    .h1{
+        font-size: var(--size-h1-xl);
+        line-height: 10rem;
+    }
+
+    .h1_sub{
+        font-size: var(--size-h1-xl_sub);
+    }
+
+    .h2{
+        font-family: var(--title-font);
+        font-size: var(--size-h2-xl);
+        font-weight: bold;
+    }
+
+    .h3{
+        font-size: var(--size-h3-xl);
+    }
+
+    .nfts_h3{
+        font-size: var(--size-h3-xl);
+    }
+
+
+    p, .menu-item{
+        font-size: var(--size-p-xl);
+    }
+    
+    /*---- 3-Header navogation ----*/        
+    .header{
+        width: 100vw;
+        height: 10vh;
+        display: flex;
+        flex-flow: row wrap;
+        padding: 1rem 4rem;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header-logo{
+        width: 4rem;
+    }
+
+    .menu-item{
+        margin-left: 2rem;
+    }
+
+    .menu-item:hover{
+        font-weight: bold;
+        font-style: italic;
+    }
+    
+    /*---- 4- Showcase ----*/        
+    .showcase{
+        padding-top: 0;
+    }
+    
+    /*---- 5- Project ----*/
+    .presentation{
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .project{
+        width: 55vw;
+        padding: 5rem 2rem;
+        display: flex;
+        flex-flow: row;
+    }
+
+    .project_left{
+        writing-mode: vertical-rl;
+        text-orientation: sideways-right;
+        transform: scale(-1, -1);
+        align-self: center;
+    }
+
+    /*---- 6- OFFF Festival ----*/
+    .off{
+        width: 30vw;
+        margin-top: 50vh;
+        margin-left: 10vw;
+    }
+
+    /*---- 7- NFTs ----*/
+    .nfts{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
